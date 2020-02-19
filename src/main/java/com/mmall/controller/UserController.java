@@ -133,4 +133,10 @@ public class UserController {
         }
         return iUserService.getInformation(currentUser.getId());
     }
+
+    @RequestMapping(value = "getAll.do",method = RequestMethod.GET)
+    @ResponseBody
+    public ServerResponse<User> getAll(){
+        return iUserService.getAll();
+    }
 }

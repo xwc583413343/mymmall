@@ -59,8 +59,11 @@
     and id != #{userId}
   </select>
 
-
-
-
+  <select id="findUserById" resultMap="com.mmall.dao.UserMapper.BaseResultMap" parameterType="map">
+    SELECT
+    <include refid="com.mmall.dao.UserMapper.Base_Column_List" />
+    from mmall_user
+    where id = #{id}
+  </select>
 
 </mapper>
